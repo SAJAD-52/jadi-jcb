@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-arabic: 'Cairo', 'Tajawal', sans-serif;
+    --font-latin: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  html[dir="ltr"] {
+    font-family: var(--font-latin);
+  }
+
+  /* Smooth scroll and modern industrial accents */
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars for clean dashboard experience */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Moroccan construction gold glow subtle effect */
+.jcb-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15);
+}
+
+.jcb-gradient-border {
+  border-image: linear-gradient(to bottom, rgba(245, 158, 11, 0.4), rgba(245, 158, 11, 0.05)) 1;
+}
